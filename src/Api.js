@@ -1,6 +1,28 @@
 
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
+import { GoogleAuthProvider, FacebookAuthProvider, getAuth, linkWithPopup} from "firebase/auth";
+
+import firebaseConfig  from './firebaseConfig';
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+
+export default {
+    googleLogar: async () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        let result = await firebase.auth().signInWithPopup(provider);
+        return result;
+    }
+}
+
+
+/*
 import { initializeApp } from 'firebase/app';
 
+import firebaseConfig from './firebaseConfig';
 import { GoogleAuthProvider, FacebookAuthProvider, getAuth, linkWithPopup} from "firebase/auth";
 
 const googleProvider = new GoogleAuthProvider();
@@ -19,13 +41,4 @@ const auth = getAuth();
 });
 export default linkWithPopup;
 
-const firebaseConfig = {
-    apiKey: "AIzaSyA4GZhFG-eRzrDclx6manbl0n7e-yx2AWo",
-    authDomain: "reactjs-54cac.firebaseapp.com",
-    projectId: "reactjs-54cac",
-    storageBucket: "reactjs-54cac.appspot.com",
-    messagingSenderId: "924285132329",
-    appId: "1:924285132329:web:58bdd87ca0d14a4e588638"
-  };
-
-  
+*/
