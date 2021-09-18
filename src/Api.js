@@ -3,7 +3,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
-import { GoogleAuthProvider, FacebookAuthProvider, getAuth, linkWithPopup} from "firebase/auth";
+//import { GoogleAuthProvider, FacebookAuthProvider, getAuth, linkWithPopup} from "firebase/auth";
 
 import firebaseConfig  from './firebaseConfig';
 

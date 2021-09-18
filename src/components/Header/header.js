@@ -6,7 +6,7 @@ import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import BuildIcon from '@material-ui/icons/Build';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
-function Header(){
+function Header(props){
     return(
         <HeaderArea>
             <div className="container">
@@ -19,6 +19,10 @@ function Header(){
                         <li><Link to="/config"><BuildIcon />Configuração</Link></li>
                         <li><Link to="/logout"><ExitToAppIcon />Sair</Link></li>
                     </ul>
+                    <div className="avatar">
+                        <img src={props.user.avatar} alt="avatar" />
+                        <label>{props.user.name}</label>
+                    </div>
                 </nav>
             </div>
         </HeaderArea>

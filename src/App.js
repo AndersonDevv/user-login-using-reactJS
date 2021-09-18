@@ -19,6 +19,7 @@ function App() {
       name: userData.displayName,
       avatar: userData.photoURL
     }
+    console.log("O avatar é: " + newUser.avatar +"| " +" nome = " + newUser.name + " id = " + newUser.id);
     setUser(newUser)
   }
   
@@ -30,7 +31,7 @@ function App() {
   else{
     return (
       <BrowserRouter>
-        <Header />
+        <Header user ={user} />
         
         <Routers></Routers>
   
