@@ -6,7 +6,7 @@ import { BtnDefaultIcons, BtnDefault } from '../../components/globalStyled';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
- 
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 function Login(){
     return (
@@ -16,14 +16,35 @@ function Login(){
                 <AreaLogin>
                 
                     <h1 className="organizarIcone">
-                        <Link to="/">VOLTAR</Link>
+                        <Link to="/login"><ArrowBackIcon /></Link>
                         Faça login em sua conta
                     </h1>
                     <p>Crie sua conta. É grátis!!!</p>
+
+                    <form>
+                        <div className="form--input">
+                            <label>Nome</label>
+                            <input type="email" placeholder="Digite seu nome"></input>
+                        </div>
+
+                        <div className="form--input">
+                            <label>E-mail</label>
+                            <input type="email" placeholder="Digite seu e-mail"></input>
+                        </div>
+
+                        <div className="form--input">
+                            <label>Senha</label>
+                            <input type="password" placeholder="Digite sua senha"></input>
+                        </div>
+
+                        <BtnDefault>Comece agora!</BtnDefault>
+                        Já tem uma conta?
+                        <Link to="/login"> Entre </Link>
+                    </form>
                 </AreaLogin>
             </Route>
 
-            <Route exact path ="*"> 
+            <Route exact path ="/login"> 
                 <AreaLogin>
                     <h1>Faça o login em sua conta</h1>
                     <BtnDefaultIcons>
@@ -58,8 +79,6 @@ function Login(){
                 </AreaLogin>
             </Route>
         </Switch>
-
-    
     </BrowserRouter>
     
     );
