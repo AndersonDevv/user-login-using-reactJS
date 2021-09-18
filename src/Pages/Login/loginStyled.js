@@ -13,9 +13,11 @@ export const AreaLogin = styled.div`
     h1{
         font-size:24px;
         margin-bottom: 10px;
+       
     }
     .organizarIcone{
         display:flex;
+        gap: 2rem;
         a{
             color: #000;
             

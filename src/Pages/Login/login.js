@@ -1,57 +1,60 @@
+//import Api from '../../Api'
 import { AreaLogin } from './loginStyled'
 
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 import { BtnDefaultIcons, BtnDefault } from '../../components/globalStyled';
 
+
 import FacebookIcon from '@material-ui/icons/Facebook';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 function Login(){
+    
+    
     return (
     <BrowserRouter>
         <Switch>
             <Route exact path ="/registrar"> 
                 <AreaLogin>
-                
                     <h1 className="organizarIcone">
-                        <Link to="/login"><ArrowBackIcon /></Link>
-                        Faça login em sua conta
+                        <Link to="/"><ArrowBackIcon /></Link>
+                            Vamos se registrar?
                     </h1>
                     <p>Crie sua conta. É grátis!!!</p>
 
                     <form>
                         <div className="form--input">
                             <label>Nome</label>
-                            <input type="email" placeholder="Digite seu nome"></input>
+                            <input type="email" placeholder="Digite seu nome" required></input>
                         </div>
 
                         <div className="form--input">
                             <label>E-mail</label>
-                            <input type="email" placeholder="Digite seu e-mail"></input>
+                            <input type="email" placeholder="Digite seu e-mail" required></input>
                         </div>
 
                         <div className="form--input">
                             <label>Senha</label>
-                            <input type="password" placeholder="Digite sua senha"></input>
+                            <input type="password" placeholder="Digite sua senha" required></input>
                         </div>
 
                         <BtnDefault>Comece agora!</BtnDefault>
                         Já tem uma conta?
-                        <Link to="/login"> Entre </Link>
+                        <Link to="/"> Entre </Link>
                     </form>
                 </AreaLogin>
             </Route>
 
-            <Route exact path ="/login"> 
+            <Route exact path ="/"> 
                 <AreaLogin>
                     <h1>Faça o login em sua conta</h1>
                     <BtnDefaultIcons>
                         <FacebookIcon />
                         <div className="center">Fazer login com o facebook</div>
                     </BtnDefaultIcons>
-                    <BtnDefaultIcons>
+                    <BtnDefaultIcons >
                         <AlternateEmailIcon />
                         <div className="center">Fazer login com o google</div>
                     </BtnDefaultIcons>
@@ -61,12 +64,13 @@ function Login(){
                     <form>
                         <div className="form--input">
                             <label>E-mail</label>
-                            <input type="email" placeholder="Digite seu e-mail"></input>
+                            <input type="email" placeholder="Digite seu e-mail" required></input>
                         </div>
 
                         <div className="form--input">
                             <label>Senha</label>
-                            <input type="password" placeholder="Digite sua senha"></input>
+                            <input type="email" placeholder="Digite seu e-mail" required></input>
+                            <input type="password" placeholder="Digite sua senha" ></input>
                         </div>
 
                         <BtnDefault>Entrar</BtnDefault>
